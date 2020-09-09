@@ -1,0 +1,131 @@
+body{
+    background-color:#2c3e50;
+}
+
+h1 {
+    color:#ecf0f1;
+    transition: color 0.5s ease-in-out; 
+    text-align: center;
+    margin-bottom: 10px;
+    margin-top: 50px;
+    /* 컬러가 바뀔때 0.5초정도 시간을 두고 자연스럽게 바뀌게 하는 효과 */
+}
+
+.js-clock {
+    text-align: center;
+    margin-top: 120px;
+    margin-bottom: 10px;
+    border-bottom-width: 10px;
+    font-size: 70px;
+    font-family: "Times New Roman", Times, serif;
+}
+
+.js-form {
+    color: #ecf0f1;
+    text-align: center;
+}
+
+.js-toDoForm {
+    text-align: center;
+    padding-left: 13px;
+}
+
+.js-greetings {
+    color: #ecf0f1;
+    text-align: center;
+    border-left-width: 12px;
+    padding-left: 18px;
+    margin-top: 10px;
+    margin-bottom: 20px;
+    font-size: x-large;
+    font-family: Georgia; 
+}
+
+input[type="text"]
+{
+    background: transparent;
+    border: none;
+    color: white;
+    font-size: 20px;    
+    width: 20%;
+    padding: 12px 50px;
+    margin: 2px;  
+    text-align: center;  
+ } /*반드시 코드 끝에 세미콜론(;) 을 붙여주자! 안그럼 인식못한다. */
+
+
+::placeholder { /* Firefox, Chrome, Opera */ 
+    color: white; 
+    font-style: italic; 
+    font-size: 20px; 
+    text-decoration: underline;
+} 
+
+.js-toDoList {
+    color: #ecf0f1;
+    text-align: center;
+    font-family: "Times New Roman", Times, serif
+}
+
+.parent {
+    text-align: center;
+    
+}
+
+.parent ul {
+    display: inline-block;
+    text-align:left;    
+    
+}
+
+.parent li {
+    float: left;
+    padding: 2px 5px;
+    border: 1px solid black;
+}
+
+.pointer {
+    cursor: pointer;
+    /* 커서를 위에 올려놓을때 포인터가 생기게 함 */
+}
+
+.clicked {
+    color: #7f8c8d;
+}
+
+.js-weather {
+    color: #ecf0f1;
+    position: absolute;
+    top: 8px;
+    right: 16px;
+    font-size: 18px;
+}
+
+.form,
+.greetings {
+    display: none;    
+}
+
+.showing {
+     display: block; /*줄바꿈 되어 나타남. */
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+} /* keyframes 는 효과를 지정한다. 형태는 함수처럼 이름을 지정해준다. 
+opacity 는 불투명함을 나타내는 뜻. 0~1로 불투명함이 증가하면서 나타나는 효과 */
+
+.bgImage {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 120%;
+    z-index: -1; /*이미지가 나타나는 layer의 위치를 정할 수 있다 -1이면 이미지가 글자뒤로 후퇴한다는 뜻. */
+    animation: fadeIn 0.5s linear;
+}
